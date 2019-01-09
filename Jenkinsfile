@@ -105,21 +105,7 @@ pipeline {
     }
 
 
-def deployPostgresIfNeeded(openshift) {
-    def dbDc = openshift.selector("dc/horse-ride-service-postgresql");
-    if (!dbDc.exists()) {
-        def dbApp = openshift.newApp(
-            "--name=horse-ride-service-postgresql",
-            "-e", "POSTGRESQL_USER=${pgUser}",
-            "-e", "POSTGRESQL_PASSWORD=${pgPassword}",
-            "-e", "POSTGRESQL_DATABASE=${pgDb}",
-            "centos/postgresql-95-centos7"
-        )
-        /* The deployment triggered by new-app needs some time to finish
-           oc rollout status --watch makes this script wait till the deployment is ready */
-        dbApp.narrow('dc').rollout().status('--watch')
-    }
-    }
+
 
 
 
