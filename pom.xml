@@ -21,7 +21,7 @@
     <version>1.5.10-13</version>
   </parent>
 
-  <artifactId>springboot-insult-service</artifactId>
+  <artifactId>springboot-insult</artifactId>
 
   <groupId>io.openshift.booster</groupId>
   <version>1.0.0-SNAPSHOT</version>
