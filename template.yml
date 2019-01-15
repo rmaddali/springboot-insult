@@ -69,27 +69,27 @@ parameters:
 - description: The name for the application.
   name: APPLICATION_NAME
   required: true
-  value: simple-spring-boot
+  value: springboot-insult
 - description: The namespace to deploy into
   name: NAMESPACE
   required: true
 - description: Git source URI for application
   name: SOURCE_REPOSITORY_URL
   required: true
-  value: https://github.com/redhat-cop/container-pipelines.git
+  value: https://github.com/rmaddali/springboot-insult.git
 - description: Git branch/tag reference
   name: SOURCE_REPOSITORY_REF
-  value: "master"
+  value: "blue-green"
 - description: Path within Git project to build; empty for root project directory.
   name: CONTEXT_DIR
-  value: "blue-green-spring"
+  value: 
 - description: Path within Git project pointing to the pipeline run script
   name: PIPELINE_SCRIPT
   value: Jenkinsfile
 - description: Source code repo for demo app
   name: APPLICATION_SOURCE_REPO
   required: true
-  value: https://github.com/redhat-cop/spring-rest.git
+  value: https://github.com/rmaddali/springboot-insult.git
 - description: GitHub trigger secret
   from: '[a-zA-Z0-9]{8}'
   generate: expression
