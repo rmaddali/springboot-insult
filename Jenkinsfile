@@ -28,7 +28,7 @@ node('maven') {
 
   stage('SCM Checkout') {
 
-    git url: "${APPLICATION_SOURCE_REPO}"
+    git branch: 'blue-green', url: "${APPLICATION_SOURCE_REPO}"
   }
 
   stage('Build') {
